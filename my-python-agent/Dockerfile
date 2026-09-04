@@ -5,12 +5,13 @@ WORKDIR /app
 
 # Copy uv files
 COPY pyproject.toml uv.lock ./
+COPY src ./src
 
 # Install dependencies
-RUN uv sync --frozen --no-cache --no-install-project
+RUN uv sync --frozen --no-cache
 
 # Copy agent file
-COPY . .
+COPY agent.py ./
 
 # Expose port
 EXPOSE 8080
