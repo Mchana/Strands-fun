@@ -1,0 +1,23 @@
+[project]
+name = "python-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Muntej Chana", email = "Muntejchana@hotmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "boto3>=1.43.88",
+    "fastapi>=0.141.1",
+    "pydantic>=2.13.5",
+    "strands-agents>=1.54.0",
+    "uvicorn[standard]>=0.52.4",
+]
+
+[project.scripts]
+python-agent = "python_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
